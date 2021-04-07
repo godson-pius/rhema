@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <body>
+  <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
@@ -13,8 +13,8 @@
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Rhema</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
@@ -25,8 +25,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Brandon Johnson</h1>
-      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+      <h1>Rhema</h1>
+      <p>A place of <span class="typed" data-typed-items="Growth, Increase, Spiritual Upliftment, Power, Real Encounter with God"></span></p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -200,78 +200,12 @@
       </div>
     </section><!-- End Skills Section -->
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Brandon Johnson</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
+    <!-- ======= Rhema Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
+          <h2>Rhema</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -279,16 +213,15 @@
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-sermon">Sermons</li>
+              <li data-filter=".filter-song">Spiritual Songs</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sermon">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -302,35 +235,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-song">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -338,76 +243,6 @@
                 <p>Card</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -438,7 +273,7 @@
                 </svg>
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4><a href="">Lorem Ipsum</a></h4>
+              <h4><a href="">Spiritual Songs</a></h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
           </div>
@@ -451,7 +286,7 @@
                 </svg>
                 <i class="bx bx-file"></i>
               </div>
-              <h4><a href="">Sed Perspiciatis</a></h4>
+              <h4><a href="">God's Word</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
           </div>
@@ -464,47 +299,8 @@
                 </svg>
                 <i class="bx bx-tachometer"></i>
               </div>
-              <h4><a href="">Magni Dolores</a></h4>
+              <h4><a href="">Spiritual Growth</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-yellow">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
-                </svg>
-                <i class="bx bx-layer"></i>
-              </div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-red">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-                </svg>
-                <i class="bx bx-slideshow"></i>
-              </div>
-              <h4><a href="">Dele Cardo</a></h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-teal">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-                </svg>
-                <i class="bx bx-arch"></i>
-              </div>
-              <h4><a href="">Divera Don</a></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
             </div>
           </div>
 
