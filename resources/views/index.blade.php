@@ -206,7 +206,8 @@
 
         <div class="section-title">
           <h2>Rhema</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
+          <a href="{{ route('upload') }}" class="btn btn-primary btn-sm shadow">Upload</a>
         </div>
 
         <div class="row">
@@ -221,21 +222,24 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-sermon">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          @if ($uploads->count())
+              @foreach ($uploads as $upload)
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-sermon">
+                    <div class="portfolio-wrap">
+                      <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                      <div class="portfolio-info">
+                        <h4>{{ $upload->title }}</h4>
+                        <p>{{ $upload->minister }}</p>
+                        <div class="portfolio-links">
+                          <a href="{{ $upload->url }}" download class="portfolio-details-lightbox"><i class="bx bx-link"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              @endforeach
+          @endif
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-song">
+          {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-song">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -247,7 +251,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
 
         </div>
 
