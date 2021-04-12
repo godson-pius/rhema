@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserToUploadTable extends Migration
+class CreateContactTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class AddUserToUploadTable extends Migration
      */
     public function up()
     {
-        Schema::table('uploads', function (Blueprint $table) {
-            $table->Integer('user_id')->onDelete('cascade');
+        Schema::create('contacts', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('subject');
+            $table->text('message');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +30,6 @@ class AddUserToUploadTable extends Migration
      */
     public function down()
     {
-        Schema::table('uploads', function (Blueprint $table) {
-            Schema::dropColumn('user_id');
-        });
+        Schema::dropIfExists('contacts');
     }
 }
