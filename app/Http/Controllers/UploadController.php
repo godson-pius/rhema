@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\Upload;
 use Illuminate\Http\Request;
 
 class UploadController extends Controller
-{
+{   
     public function index()
     {
-        return view('uploads.index');
+        $tag = Tag::get();
+        return view('uploads.index', [
+            'tags' => $tag
+        ]);
     }
 
     // For storing the uploads
@@ -34,6 +38,7 @@ class UploadController extends Controller
            'url' => $path,
            'image' => $path2,
            'tag' => $request->tag,
+           'user_id' => auth()->user()->id,
         ]);
 
         return back()->with('status', 'Upload Successful');

@@ -7,7 +7,7 @@
             <h3 class="">Upload Post</h3>
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
-                    <b>{{ session('status') }}</b>
+                    {{ session('status') }}
                 </div>
             @endif
             <form action="{{ route('upload') }}" method="post" enctype="multipart/form-data">
@@ -34,8 +34,13 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
                 <select class="form-control p-3 mb-2" name="tag">
-                    <option>Tag1</option>
-                    <option>Tag2</option>
+                    
+                    @if ($tags->count())
+                        @foreach ($tags as $tag)
+                            <option>{{ $tag->name }}</option>
+                        @endforeach
+                    @endif
+
                 </select>
                 @error('tag')
                     <span class="text-danger">{{ $message }}</span>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,13 @@ use App\Http\Controllers\UploadController;
 |
 */
 
-Route::get('/upload', [UploadController::class, 'index'])->name('upload');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'store']);
+
+Route::get('/upload', [UploadController::class, 'index'])->name('upload')->middleware(['auth']);
 Route::post('/upload', [UploadController::class, 'store']);
 
-Route::get('/', [UploadController::class, 'show']);
+Route::get('/', [UploadController::class, 'show'])->name('main');

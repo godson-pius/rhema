@@ -207,7 +207,14 @@
         <div class="section-title">
           <h2>Rhema</h2>
           {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
-          <a href="{{ route('upload') }}" class="btn btn-primary btn-sm shadow">Upload</a>
+          @if (auth()->user())
+            <a href="{{ route('upload') }}" class="btn btn-primary btn-sm shadow">Upload</a>
+          @else
+              <i class="bx bxs-left-arrow-alt h5"></i><a href="{{ route('login') }}" class="h4 text-info">Login to upload</a><i class="bx bxs-right-arrow-alt h5"></i>
+          @endif
+          {{-- @auth
+            <a href="{{ route('upload') }}" class="btn btn-primary btn-sm shadow">Upload</a>
+          @endauth --}}
         </div>
 
         <div class="row">
@@ -223,20 +230,27 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           @if ($uploads->count())
+
               @foreach ($uploads as $upload)
                   <div class="col-lg-4 col-md-6 portfolio-item filter-sermon">
                     <div class="portfolio-wrap">
-                      <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                      <img src="{{ $upload->image }}" class="img-fluid" alt="">
                       <div class="portfolio-info">
                         <h4>{{ $upload->title }}</h4>
                         <p>{{ $upload->minister }}</p>
                         <div class="portfolio-links">
-                          <a href="{{ $upload->url }}" download class="portfolio-details-lightbox"><i class="bx bx-link"></i></a>
+                          <a href="{{ $upload->url }}" download="{{ $upload->title }}"><i class="bx bx-link"></i></a>
                         </div>
                       </div>
                     </div>
                   </div>
               @endforeach
+          @else
+
+            <div class="text-center text-primary">
+              <i class="bx bxs-left-arrow-alt h5"></i><span class="h3">No Uploads Yet</span><i class="bx bxs-right-arrow-alt h5"></i>
+            </div>
+
           @endif
 
           {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-song">
