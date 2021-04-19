@@ -52,4 +52,14 @@ class UploadController extends Controller
             'uploads' => $uploads
         ]);
     }
+
+    public function edit(Upload $upload)
+    {
+        dd($upload);
+        $specific_post = $upload;
+
+        return view('uploads.edit', [
+            'posts' => $specific_post,
+        ]);
+    }
 }

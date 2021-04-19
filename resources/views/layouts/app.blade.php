@@ -35,7 +35,7 @@
   <footer id="footer">
     <div class="container">
       <h3>Rhema</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <p>Rhema, a platform where generals are built through the word and prophetic sounds of God. Sermons are been posted here and the prophetic psalms from Zion are also been posted here. Be blessed</p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

@@ -3,6 +3,24 @@
 @section('content')
   <body>
 
+    <div class="container">
+      <div class="my-3 text-center">
+
+      @if (session('status'))
+          <div class="sent-message alert alert-success">{{ session('status') }}</div>
+      @endif
+      
+    </div>
+    
+    <div class="my-3 text-center">
+
+      @if (session('success'))
+          <div class="sent-message alert alert-success">{{ session('success') }}</div>
+      @endif
+      
+    </div>
+    </div>
+
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -45,160 +63,49 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Rhema, a platform where generals are built through the word and prophetic sounds of God. Sermons are been posted here and the prophetic psalms from Zion are also been posted here. Be blessed</p>
         </div>
 
-        <div class="row">
+        @if (auth()->user())
+
+            <div class="row">
           <div class="col-lg-4">
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>UI/UX Designer &amp; Web Developer.</h3>
+            <h3>{{ auth()->user()->name }}</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              {{ auth()->user()->name }}, your account was created {{ auth()->user()->created_at->diffForHumans() }}
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>{{ auth()->user()->name }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Password:</strong> <span>your preferred password</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->user()->email }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Joined:</strong> <span>{{ auth()->user()->created_at->format('D - M - Y') }}</span></li>
                 </ul>
               </div>
+              <div class="container">
+                <a href="{{ route('upload') }}" class="btn btn-primary shadow mt-3">Upload Rhema</a>
+                <a href="{{ route('logout') }}" class="btn btn-dark shadow mt-3 mr-5">Logout</a>
+              </div>
             </div>
-            <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>
+         
           </div>
         </div>
+        @else
+          <div class="container text-center">
+            <i class="bx bxs-left-arrow-alt h6"></i><a href="{{ route('login') }}" class="h4 text-primary">LOGIN TO UPLOAD</a><i class="bx bxs-right-arrow-alt h5"></i>
+          </div>
+        @endif
 
       </div>
     </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Awards</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">PHP <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
 
     <!-- ======= Rhema Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
@@ -206,15 +113,12 @@
 
         <div class="section-title">
           <h2>Rhema</h2>
-          {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
+          <p>Rhema, a platform where generals are built through the word and prophetic sounds of God. Sermons are been posted here and the prophetic psalms from Zion are also been posted here. Be blessed</p>
+
           @if (auth()->user())
-            <a href="{{ route('upload') }}" class="btn btn-primary btn-sm shadow">Upload</a>
-          @else
-              <i class="bx bxs-left-arrow-alt h5"></i><a href="{{ route('login') }}" class="h4 text-info">Login to upload</a><i class="bx bxs-right-arrow-alt h5"></i>
+            <a href="{{ route('upload') }}" class="btn btn-primary shadow mt-3">Upload Rhema</a>
           @endif
-          {{-- @auth
-            <a href="{{ route('upload') }}" class="btn btn-primary btn-sm shadow">Upload</a>
-          @endauth --}}
+
         </div>
 
         <div class="row">
@@ -233,16 +137,22 @@
 
               @foreach ($uploads as $upload)
                   <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $upload->tag }}">
-                    <div class="portfolio-wrap bg-primary rounded shadow" style="min-height: 278px; background-image: url('{{ $upload->image }}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
-                      {{-- <img src="{{ $upload->image }}" class="img-fluid" alt=""> --}}
+                    <div class="portfolio-wrap bg-primary shadow mb-2" style="min-height: 278px; background-image: url('{{ $upload->image }}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
                       <div class="portfolio-info">
                         <h4>{{ $upload->title }}</h4>
                         <p>{{ $upload->minister }}</p>
+                        <small class="">{{ $upload->created_at->diffForHumans() }}</small>
                         <div class="portfolio-links">
                           <a href="{{ $upload->url }}" download="{{ $upload->title }}"><i class="bx bx-link"></i></a>
+
+                          @if (auth()->user()->id === $upload->user_id)
+                              <a href="{{ route('edit', $upload) }}"><i class="bx bxs-cog"></i></a>
+                          @endif
+
                         </div>
                       </div>
                     </div>
+                    <span class="h6"><b>Source</b>: {{ $upload->uploadedBy($upload->user_id)->name }}</span>
                   </div>
               @endforeach
           @else
@@ -278,7 +188,7 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Rhema, a platform where generals are built through the word and prophetic sounds of God. Sermons are been posted here and the prophetic psalms from Zion are also been posted here. Be blessed</p>
         </div>
 
         <div class="row">
@@ -363,7 +273,9 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="{{ route('contact') }}" method="post" role="form" class="php-email-form">
+            <form action="{{ route('contact') }}" method="post">
+              @csrf
+
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -378,12 +290,8 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+
+              <div class="text-center"><button type="submit" class="btn btn-primary mt-3">Send Message</button></div>
             </form>
 
           </div>

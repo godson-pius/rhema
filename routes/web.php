@@ -17,7 +17,9 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::get('/register', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact');
+
+Route::get('/logout', [LogoutController::class, 'index'])->name('logout');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
@@ -26,6 +28,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/upload', [UploadController::class, 'index'])->name('upload')->middleware(['auth']);
+Route::get('/upload/{upload}', [UploadController::class, 'edit'])->name('edit');
 Route::post('/upload', [UploadController::class, 'store']);
 
-Route::get('/', [UploadController::class, 'show'])->name('main');
+Route::get('/', [UploadController::class, 'show'])->name('main')->middleware(['auth']);
