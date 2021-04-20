@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 
 /*
@@ -28,7 +29,9 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/upload', [UploadController::class, 'index'])->name('upload')->middleware(['auth']);
-Route::get('/upload/{upload}', [UploadController::class, 'edit'])->name('edit');
+Route::get('/rhema/edit/{upload}', [UploadController::class, 'edit'])->name('edit');
+Route::post('/upload/{upload}', [UploadController::class, 'update'])->name('update');
+Route::get('/rhema/delete/{upload}', [UploadController::class, 'delete'])->name('delete');
 Route::post('/upload', [UploadController::class, 'store']);
 
-Route::get('/', [UploadController::class, 'show'])->name('main')->middleware(['auth']);
+Route::get('/', [UploadController::class, 'show'])->name('main');

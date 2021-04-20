@@ -55,11 +55,49 @@ class UploadController extends Controller
 
     public function edit(Upload $upload)
     {
-        dd($upload);
         $specific_post = $upload;
+        $tag = Tag::get();
+        // dd($specific_post->title);
 
         return view('uploads.edit', [
             'posts' => $specific_post,
+            'tags' => $tag,
         ]);
+    }
+
+    public function update(Request $request, Upload $upload)
+    {
+        // dd($upload->id);
+        // $data = $request->except('_method','_token','submit');
+
+        $path = asset(str_replace("public", "storage", $request->file('url')->store('public')));
+        $path2 = asset(str_replace("public", "storage", $request->file('image')->store('public')));
+
+
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'minister' => 'required|max:255',
+            'url' => 'required',
+            'image' => 'required',
+            'tag' => 'required|max:255',
+        ]);
+
+        $update = Upload::find($upload->id);
+        
+        $update->title = $request->title;
+        $update->minister = $request->minister;
+        $update->url = $path;
+        $update->image = $path2;
+        $update->tag = $request->tag;
+
+        if ($update->save()) {
+            return redirect()->route('main')->with('update', "Rhema have been updated");
+        }
+    }
+
+    public function delete(Upload $upload)
+    {
+        Upload::destroy($upload->id);
+        return redirect()->route('main')->with('delete', "Rhema was deleted successfully");
     }
 }

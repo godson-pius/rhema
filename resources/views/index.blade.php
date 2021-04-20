@@ -10,6 +10,18 @@
           <div class="sent-message alert alert-success">{{ session('status') }}</div>
       @endif
       
+      @if (session('update'))
+          <div class="sent-message alert alert-success">{{ session('update') }}</div>
+      @endif
+      
+      @if (session('delete'))
+          <div class="sent-message alert alert-success">{{ session('delete') }}</div>
+      @endif
+      
+      @if (session('logout'))
+          <div class="sent-message alert alert-danger">{{ session('logout') }}</div>
+      @endif
+      
     </div>
     
     <div class="my-3 text-center">
@@ -100,7 +112,7 @@
         </div>
         @else
           <div class="container text-center">
-            <i class="bx bxs-left-arrow-alt h6"></i><a href="{{ route('login') }}" class="h4 text-primary">LOGIN TO UPLOAD</a><i class="bx bxs-right-arrow-alt h5"></i>
+            <i class="bx bxs-left-arrow-alt h6"></i><a href="{{ route('login') }}" class="h4 text-primary">Login to upload</a><i class="bx bxs-right-arrow-alt h5"></i>
           </div>
         @endif
 
@@ -143,11 +155,16 @@
                         <p>{{ $upload->minister }}</p>
                         <small class="">{{ $upload->created_at->diffForHumans() }}</small>
                         <div class="portfolio-links">
-                          <a href="{{ $upload->url }}" download="{{ $upload->title }}"><i class="bx bx-link"></i></a>
+                          <a href="{{ $upload->url }}" download="{{ $upload->title }}" title="Download Rhema"><i class="bx bx-link"></i></a>
 
-                          @if (auth()->user()->id === $upload->user_id)
-                              <a href="{{ route('edit', $upload) }}"><i class="bx bxs-cog"></i></a>
+                          @if (auth()->user())
+                              @if (auth()->user()->id === $upload->user_id)
+                                  <a href="{{ route('edit', $upload) }}" title="Edit Rhema"><i class="bx bxs-cog"></i></a>
+                                  <a href="{{ route('delete', $upload) }}" class="text-danger" title="Delete Rhema"><i class="bx bxs-trash"></i></a>
+                              @endif
                           @endif
+
+                          
 
                         </div>
                       </div>
